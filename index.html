@@ -7,8 +7,8 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <title>CSS Scrolling &amp; Parallax</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/a8ce6a42aa.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -18,12 +18,26 @@
   <nav class="site-nav text-uppercase navbar navbar-expand-md navbar-dark w-100 bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand font-weight-normal" href="#page-hero"><i class="fas fa-cube mr-2"></i>LiL Monsters</a>
-      <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="#meet">meet</a>
-        <a class="nav-item nav-link" href="#types">types</a>
-        <a class="nav-item nav-link" href="#friend">friend</a>
-        <a class="nav-item nav-link" href="#hire">hire</a>
-      </div>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#myTogglerNav"
+        aria-controls="#myTogglerNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <section id="myTogglerNav" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#meet">meet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#types">types</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#friend">friend</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#hire">hire</a>
+          </li>
+        </ul>
+      </section>
     </div>
   </nav>
 
