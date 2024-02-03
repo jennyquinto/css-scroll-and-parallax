@@ -1,3 +1,4 @@
+# CSS
 ## backgrounds 
 **Definition**: backgrounds are a series of properties of box elements
 **OPT**: color image repeat position size attachment origin clip
@@ -20,3 +21,7 @@
 
 ## Animation properties
 **OPT**: name duration delay timing-function iteration-count direction fill-mode play-state
+
+# JS
+- requestAnimationFrame(): This method can call another function, that is called a Callback that will perform your animation
+- getBoundingClientRect(): it could be used to determine the position of an object and return rectangle. which allows you to access these all dimensions
