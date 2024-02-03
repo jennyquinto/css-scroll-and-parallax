@@ -24,6 +24,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  opacity: .5;
+  animation: slideUp 0.5s;
 }
 
 .site-nav .nav-link {
@@ -51,4 +53,11 @@
   opacity: 1;
   background-color: rgb(206 207 31 / .2);
   transform: scale(1);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(300px) scale(1.2);
+    opacity: 0;
+  }
 }

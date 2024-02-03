@@ -17,3 +17,6 @@
 
 ## Transition properties
 **OPT**: property duration delay timing-function
+
+## Animation properties
+**OPT**: name duration delay timing-function iteration-count direction fill-mode play-state
