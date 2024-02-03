@@ -1,13 +1,26 @@
 $(function () {
     const headerContent = document.querySelector('.header-content')
+    const headerCue = document.querySelector('.header-cue')
     const nav = document.querySelector('.site-nav')
     const meetMonsters = document.querySelector('#meet')
+    const monsterScroll = document.querySelectorAll('#monster-group .monster')
+
     const navHeight = nav.scrollHeight
 
-    const headerCue = document.querySelector('.header-cue')
+
+    function inViewPort(el) {
+        const rect = el.getBoundingClientRect()
+        return (
+            (rect.top <= 0 && rect.bottom >= 0) ||
+            (rect.bottom >= window.innerHeight && rect.top <= window.innerHeight) ||
+            (rect.top >= 0 && rect.bottom <= window.innerHeight)
+        )
+    }
+
     function moveHeader() {
-        let top = window.scrollY
+        const top = window.scrollY
         const mainOnTop = meetMonsters.getBoundingClientRect().top - navHeight
+
         mainOnTop < 0
             ? nav.classList.add('in-body')
             : nav.classList.remove('in-body')
@@ -20,6 +33,9 @@ $(function () {
         headerContent.style.transform = `translateY(-${top / 1.5}px)`
         headerContent.style.opacity = 1 - Math.max(top / (window.innerHeight * .2), 0)
 
+        monsterScroll.forEach(monster => inViewPort(monster)
+            ? monster.classList.add('appear')
+            : monster.classList.remove('appear'))
 
         window.requestAnimationFrame(moveHeader)
     }
