@@ -56,6 +56,19 @@
   transform: scale(1);
 }
 
+.site-header .header-title {
+  animation: clear .8s .4s forwards;
+  transform: translateY(10rem);
+  opacity: 0;
+}
+
+.site-header .header-subtitle {
+  animation: clear 1s .7s forwards;
+  transform: translateY(10rem);
+  opacity: 0;
+}
+
+
 @keyframes slideUp {
   from {
     transform: translateY(300px) scale(1.2);
