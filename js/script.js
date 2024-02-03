@@ -44,14 +44,16 @@ $(function () {
 
     //ScrollMagic
     const controller = new ScrollMagic.Controller()
+    const friendTextTween = TweenMax.from('.friend-text', {
+        y: 400,
+        opacity: 0,
+    })
+
+
     new ScrollMagic.Scene({
         triggerElement: '#friend',
-        triggerHook: 0,
-        offset: -100,
-        // duration: 200,
-        reverse: false,
     })
-        .setClassToggle('.friend-text', 'appear')
+        .setTween(friendTextTween)
         .addIndicators({ name: 'friends' })
         .addTo(controller)
 
