@@ -4,6 +4,29 @@
   box-sizing: border-box;
 }
 
+.site-nav {
+  z-index: 10;
+}
+
+.site-header {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(100deg, rgb(103 66 150), rgb(54 28 88));
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background-image: url('../images/hero.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-size: 150%;
+  background-attachment: scroll;
+}
+
 .site-nav .nav-link {
   position: relative;
   padding-block-end: 2px;
