@@ -25,3 +25,8 @@
 # JS
 - requestAnimationFrame(): This method can call another function, that is called a Callback that will perform your animation
 - getBoundingClientRect(): it could be used to determine the position of an object and return rectangle. which allows you to access these all dimensions
+
+## Page Scroll
+- window.pageYOffset: that tell us how far from the top left of the window we are currently at.
+- window.pageYOffset: it tells you how far to the right we have scrolled
+- parallax effect: it is obtained by starting to scroll things at differents speeds
