@@ -54,6 +54,7 @@ $(function () {
 
     new ScrollMagic.Scene({
         triggerElement: '#friend',
+        duration: '300px'
     })
         .setTween(friendTextTween)
         .addIndicators({ name: 'friends' })
