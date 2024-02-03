@@ -17,7 +17,8 @@ $(function () {
             ? headerCue.classList.add('d-none')
             : headerCue.classList.remove('d-none')
 
-        headerContent.style.transform = `translateY(-${top / 1}px)`
+        headerContent.style.transform = `translateY(-${top / 1.5}px)`
+        headerContent.style.opacity = 1 - Math.max(top / (window.innerHeight * .2), 0)
 
 
         window.requestAnimationFrame(moveHeader)
