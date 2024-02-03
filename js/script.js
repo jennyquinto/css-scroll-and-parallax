@@ -44,7 +44,13 @@ $(function () {
 
     //ScrollMagic
     const controller = new ScrollMagic.Controller()
-    new ScrollMagic.Scene({ triggerElement: '#friend' })
+    new ScrollMagic.Scene({
+        triggerElement: '#friend',
+        triggerHook: 0,
+        offset: -100,
+        duration: 200,
+        reverse: false,
+    })
         .setClassToggle('.friend-text', 'appear')
         .addIndicators({ name: 'friends' })
         .addTo(controller)
