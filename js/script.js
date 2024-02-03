@@ -6,6 +6,7 @@ $(function () {
 
     const headerCue = document.querySelector('.header-cue')
     function moveHeader() {
+        let top = window.scrollY
         const mainOnTop = meetMonsters.getBoundingClientRect().top - navHeight
         mainOnTop < 0
             ? nav.classList.add('in-body')
@@ -15,6 +16,9 @@ $(function () {
         currentCuePosition < 0
             ? headerCue.classList.add('d-none')
             : headerCue.classList.remove('d-none')
+
+        headerContent.style.transform = `translateY(-${top / 1}px)`
+
 
         window.requestAnimationFrame(moveHeader)
     }
