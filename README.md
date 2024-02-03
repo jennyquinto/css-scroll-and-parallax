@@ -14,3 +14,6 @@
 -background-size: k: (default) auto, width/height cover contain
 ### background Combo
 - background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment;
+
+## Transition properties
+**OPT**: property duration delay timing-function

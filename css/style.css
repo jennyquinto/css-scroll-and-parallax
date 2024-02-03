@@ -12,6 +12,7 @@
   position: relative;
   height: 100vh;
   background: linear-gradient(100deg, rgb(103 66 150), rgb(54 28 88));
+  overflow: hidden;
 }
 
 .site-header::before {
@@ -23,8 +24,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  background-size: 150%;
-  background-attachment: scroll;
 }
 
 .site-nav .nav-link {
@@ -40,10 +39,16 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: rgb(266 207 31 / 0);
+  transition: all 0.5s cubic-bezier(0.03, 0.78, 0.4, 1.39);
+  transform: scale(0);
+  opacity: 0;
   visibility: hidden;
 }
 
 .site-nav .nav-link:hover::before {
   visibility: visible;
+  opacity: 1;
+  background-color: rgb(206 207 31 / .2);
+  transform: scale(1);
 }
