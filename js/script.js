@@ -1,12 +1,20 @@
 $(function () {
-    let nav = document.querySelector('.site-nav')
-    let meetMonsters = document.querySelector('#meet')
-    let navHeight = nav.scrollHeight
+    const headerContent = document.querySelector('.header-content')
+    const nav = document.querySelector('.site-nav')
+    const meetMonsters = document.querySelector('#meet')
+    const navHeight = nav.scrollHeight
+
+    const headerCue = document.querySelector('.header-cue')
     function moveHeader() {
-        let mainOnTop = meetMonsters.getBoundingClientRect().top - navHeight
+        const mainOnTop = meetMonsters.getBoundingClientRect().top - navHeight
         mainOnTop < 0
             ? nav.classList.add('in-body')
             : nav.classList.remove('in-body')
+        const currentCuePosition = headerContent.getBoundingClientRect().top
+
+        currentCuePosition < 0
+            ? headerCue.classList.add('d-none')
+            : headerCue.classList.remove('d-none')
 
         window.requestAnimationFrame(moveHeader)
     }
