@@ -6,7 +6,7 @@ $(function () {
     const monsterScroll = document.querySelectorAll('#monster-group .monster')
 
     const navHeight = nav.scrollHeight
-
+    monsterScroll.forEach(monster => monster.style.animationDelay = `${Math.random() * 1 + 0.4}s`)
 
     function inViewPort(el) {
         const rect = el.getBoundingClientRect()
