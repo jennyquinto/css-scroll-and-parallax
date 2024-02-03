@@ -48,7 +48,7 @@ $(function () {
         triggerElement: '#friend',
         triggerHook: 0,
         offset: -100,
-        duration: 200,
+        // duration: 200,
         reverse: false,
     })
         .setClassToggle('.friend-text', 'appear')
