@@ -62,4 +62,34 @@ $(function () {
         .addTo(controller)
 
 
+    //Parachute Animation
+    const parachuteTween = new TimelineMax()
+
+    parachuteTween
+        .from('#parachute', {
+            scale: .5,
+            opacity: .25,
+            rotation: -40,
+            x: '100%',
+            y: '-200%'
+        })
+        .to('#parachute', {
+            x: '30%',
+            y: '20%',
+            rotation: -30,
+        })
+        .to('#parachute', {
+            x: '-80%',
+            y: '250%',
+            rotation: 30,
+        })
+
+    const parachuteScene = new ScrollMagic.Scene({
+        triggerElement: '#friend',
+        duration: '170%',
+        triggerHook: 0
+    })
+        .setTween(parachuteTween)
+        .addIndicators({ name: 'Parachute' })
+        .addTo(controller)
 })
