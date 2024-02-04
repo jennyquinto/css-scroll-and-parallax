@@ -56,6 +56,7 @@ $(function () {
         duration: '100%',
     })
         .setTween(friendTextTween)
+        .setPin('#friend')
         .addIndicators({ name: 'friends' })
         .addTo(controller)
 
