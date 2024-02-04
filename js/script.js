@@ -44,12 +44,12 @@ $(function () {
 
     //ScrollMagic
     const controller = new ScrollMagic.Controller()
+
     const friendTextTween = TweenMax.from('.friend-text', {
         y: 400,
         opacity: 0,
         duration: 2,
     })
-
 
     new ScrollMagic.Scene({
         triggerElement: '#friend',
@@ -58,13 +58,12 @@ $(function () {
     })
         .setTween(friendTextTween)
         .setPin('#friend')
-        .addIndicators({ name: 'friends' })
+        // .addIndicators({ name: 'friends' })
         .addTo(controller)
 
 
     //Parachute Animation
     const parachuteTween = new TimelineMax()
-
     parachuteTween
         .from('#parachute', {
             scale: .5,
@@ -90,6 +89,26 @@ $(function () {
         triggerHook: 0
     })
         .setTween(parachuteTween)
-        .addIndicators({ name: 'Parachute' })
+        // .addIndicators({ name: 'Parachute' })
         .addTo(controller)
-})
+
+    const typesTween = new TimelineMax()
+
+    typesTween
+        .from('#types .col', {
+            scale: .5,
+            opacity: 0,
+            stagger: .25,
+        })
+
+    new ScrollMagic.Scene({
+        triggerElement: '#types',
+        triggerHook: 0,
+        duration: 300
+    })
+        .setPin('#types')
+        .setTween(typesTween)
+        .addTo(controller)
+
+
+}) //when page load
